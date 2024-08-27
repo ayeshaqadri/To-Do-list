@@ -65,7 +65,13 @@ button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
+button:hover {
+    transform: scale(1.05);
+    background-color: #163240;
+}
+
 ul li {
     list-style: none;
     cursor: pointer;
@@ -73,7 +79,21 @@ ul li {
     padding: 12px 8px 12px 50px;
     user-select: none;
     position: relative;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+ul li.new-task {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 ul li::before{
     content: '';
     position: absolute;
@@ -107,4 +127,82 @@ ul li span{
 }
 ul li span:hover{
     background: #000000;
+}
+@media (max-width: 375px) {
+    .countainer{
+        width: 70%;
+    }
+    .todo-app h1 {
+        margin-bottom: 30%;
+        font-size: 26px;
+    }
+    #icon {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    .row {
+        padding-left: 2px;
+        margin-bottom: 25px;
+    }
+    #inputbox {
+        width: 115px;
+        font-size: 10px;
+
+    }
+    button {
+        width: 30px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .countainer{
+        width: 70%;
+    }
+    .todo-app h1 {
+        margin-bottom: 30%;
+        font-size: 26px;
+    }
+    #icon {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    .row {
+        padding-left: 2px;
+        margin-bottom: 25px;
+    }
+    #inputbox {
+        width: 115px;
+        font-size: 10px;
+
+    }
+    button {
+        width: 30px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 1280px) {
+    .countainer{
+        width: 70%;
+    }
+    .todo-app h1 {
+        margin-bottom: 30%;
+        font-size: 26px;
+    }
+    #icon {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    .row {
+        padding-left: 2px;
+        margin-bottom: 25px;
+    }
+    #inputbox {
+        width: 115px;
+        font-size: 10px;
+
+    }
+    button {
+        width: 30px;
+        font-size: 12px;
+    }
 }

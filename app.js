@@ -2,7 +2,11 @@ const inputbox = document.getElementById("inputbox");
 const listcountainer = document.getElementById("list-countainer");
 function addTask(){
     if (inputbox.value === ''){
-        alert("you must write something!!!")
+        Swal.fire({
+            title: "EMPTY INPUT...",
+            text: "you must write something",
+            icon: "question"
+          });
     }
     else{
         let li = document.createElement("li");
